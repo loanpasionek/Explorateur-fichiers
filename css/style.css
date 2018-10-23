@@ -1,0 +1,119 @@
+@import "reset.css";
+
+body{height: 100vh;}
+main{height: 75%;}
+header
+{
+    height:140px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=================================================================
+                        Classe générique
+==================================================================*/
+
+/* Position + display */
+
+.relative{position: relative;}
+
+.d-flex{display: flex;}
+
+/* Background color & Color */
+
+.color-1{color: white;}
+
+.bg-1{background-color: #242424;}
+
+.bg-2{background-color:#444;}
+
+/* Margin & padding */
+
+.m-auto{margin:auto;}
+
+.ml-5{margin-left:5px;}
+
+/* Font family + font size */
+
+.roboto-medium{font-family: "Roboto:500", sans-serif;}
+.roboto-bold{font-family: "Roboto:700", sans-serif;}
+
+.fs-20{font-size: 20px;}
+.fs-30{font-size: 30px;}
+
+/* Text-align & Text decoration */
+
+.text-center{text-align: center;}
+.textdecoration-none{text-decoration: none;}
+
+/*=================================================================
+                        Classe spécifique
+==================================================================*/
+
+
+/* Container principale */
+.maincontainer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    width:49%;
+    margin:auto;
+}
+
+/* Bloc où se trouve les IMG + Liens */
+
+.box
+{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+
+/* Réglage image + Positionnement des liens sur dossier / fichier */
+
+.lienimg
+{
+    position: absolute;
+    top: calc(50% - 60px);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    line-height: 120px;
+    transition: all 0.5s ease;
+}
+
+.taille-image
+{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - 60px);
+    margin: 0 auto;
+    transition: all 0.5s ease;
+    z-index: 2
+}
+
+
+.box:hover .lienimg , .box:hover .taille-image{transform: scale(1.5);}
+.box:hover .notransform{transform: scale(1);}
+
+.lienimg:hover{color: #c4c4c4;}
+
+.absolute-fichier
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
